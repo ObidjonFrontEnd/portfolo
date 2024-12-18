@@ -1,0 +1,128 @@
+header{
+    margin-bottom: 30px;
+    margin-bottom: 30px;
+    .menu{
+        width: 105%;
+        height: 100vh;
+        background-color: black;
+        z-index: 100;
+        position: fixed;
+        top: 0;
+        transform: translate(100%);
+        transition: all 1s ease;
+        i{
+            color: white;
+            font-size: 30px;
+            position: absolute;
+            right: 10%;
+            top: 10px;
+        }
+        ul{
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            li{
+                a{
+                    color: white !important;
+                }
+            }
+        }
+    }
+    .nav-fixset{
+        width: 100%;
+        position: fixed;
+        z-index: 99;
+        top: 0;
+        background-color: rgba(255, 255, 255, 0.8);
+        nav{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 60px;
+            width: 100%;
+          
+            input[type=checkbox]{
+                display: none;
+            }
+            .bi-list{
+                display: none;
+                font-size: 30px;
+                position: relative;
+            }
+            #menu:checked ~ .menu{
+                transform: translate(-5%);
+                
+            }
+            .logo{
+                a{
+                    font-weight: 900;
+                    font-size: 25px;
+                    @include gradent;
+                }
+            }
+            ul{
+                display: flex;
+                column-gap: 67px;
+                li{
+                    a{
+                        color: $grey;
+                        font-size: 20px;
+                        font-weight: 500;
+                        line-height: 26px;
+                        transition: all .5s ease;
+                        &:hover{
+                            @include gradent;
+                        }
+                    }
+                }
+                .icons{
+                    display: flex;
+                    gap: 21px;
+                    i{
+                        color: $grey;
+                        font-size: 22px;
+                    }
+                }
+            }
+        }
+    }
+
+    .hero{
+        padding-top: 140px;
+        display: flex;
+        justify-content: space-between;
+        
+        .hero-title{
+            h1{
+                font-family: "Poppins", serif;
+                font-size: 58px;
+                font-weight: 700;
+                line-height: 70px;
+                letter-spacing: -1px;
+                color: $dark-grey;
+                span{
+                    @include gradent;
+                }
+            }
+        }
+        .hero-photo{
+            border: 9px solid transition;
+            border-radius: 50%;
+            background: linear-gradient(to top, #E70FAA 0%, #00C0FD 100%);
+            width: 349px;
+            height: 349px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            img{
+                border-radius: 230px;
+                width: 96%;
+                height: 96%;
+                
+            }
+
+        }
+    }
+}
